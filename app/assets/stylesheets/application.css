@@ -19,13 +19,32 @@ html{
 }
 
 body {
+  font-family: 'Abel', sans-serif;
   color: white;
   background-color: grey;
   background-image: url('http://res.cloudinary.com/ddpouudhk/image/upload/v1481751084/2rmwpwymz84-david-di-veroli_csexlc.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
    background-position: center;
+
 }
+
+/* HEADER */
+
+.logo{
+  margin:auto;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Kumar One', cursive;
+}
+
+@media screen and (max-width: 675px) {
+    .logo {
+        font-size: 20px;
+    }
+}
+
+
 
 
 
@@ -49,6 +68,7 @@ body {
    margin: 10px 5px 0px 5px;
    color: white;
    text-align: center;
+   border-width: 2px;
    border-style: dotted;
    border-color: white;
 }
