@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+html{
+  padding: 0;
+  margin: 0;
+}
 
 body {
   color: white;
@@ -23,14 +27,32 @@ body {
    background-position: center;
 }
 
-.menu_box{
-  width: 20%;
-  margin: 30px;
-  padding: 20px;
-  border-style: dotted;
-  border-color: white;
-  display: inline-block;
+
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+   -webkit-flex-flow: row wrap;
+   justify-content: center;
 }
+
+.menu_box {
+   padding: 5px;
+   width: 300px;
+   margin: 10px 5px 0px 5px;
+   color: white;
+   text-align: center;
+   border-style: dotted;
+   border-color: white;
+}
+
 
 .menu_box p {
   font-size: 20px;
