@@ -8,6 +8,6 @@
 
 Smoothie.delete_all
 
-Smoothie.create(name: "Little miss sunshine", size: "small")
-Smoothie.create(name: "Beautyful day", size: "medium")
-Smoothie.create(name: "Big delight", size: "large")
+Smoothie.create(name: "Little Luxury", size: "small")
+Smoothie.create(name: "Meet Me in The Middle", size: "medium")
+Smoothie.create(name: "Big is Beautiful", size: "large")
