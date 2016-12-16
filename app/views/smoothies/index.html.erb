@@ -13,13 +13,35 @@
 
   <div class="menu_box">
     <h1>Pick your liquid:</h1>
+    <div class="options">
+      <form>
+        <% @liquids.each do |liquid| %>
+          <input type="radio" name="liquid" value="<%= liquid.name %>"><%=liquid.name %> <span class="right"><%= number_to_currency(liquid.price, unit: '€') %></span><br>
+        <% end %>
+      </form>
+    </div>
   </div>
 
   <div class="menu_box">
     <h1>Pick your vitmins:</h1>
+    <div class="options">
+      <form>
+        <% @solids.each do |ingredient| %>
+          <input type="checkbox" name="ingredient" value="<%= ingredient.name %>"><%=ingredient.name %> <span class="right"><%= number_to_currency(ingredient.price, unit: '€') %></span><br>
+        <% end %>
+      </form>
+    </div>
   </div>
+
 
   <div class="menu_box">
     <h1>Spice it up!</h1>
+    <div class="options">
+      <form>
+        <% @spices.each do |spice| %>
+          <input type="checkbox" name="spice" value="<%= spice.name %>"><%=spice.name %> <span class="right"><%= number_to_currency(spice.price, unit: '€') %></span><br>
+        <% end %>
+      </form>
+    </div>
   </div>
 </div>
