@@ -63,14 +63,22 @@ body {
 }
 
 .menu_box {
-   padding: 5px;
-   width: 300px;
+   padding: 15px;
+   width: 285px;
    margin: 10px 5px 0px 5px;
    color: white;
    text-align: center;
    border-width: 2px;
    border-style: dotted;
    border-color: white;
+   font-size: 20px;
+}
+
+.options {
+  text-align: left;
+}
+.right{
+  float: right;
 }
 
 
