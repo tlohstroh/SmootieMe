@@ -1,5 +1,24 @@
-<h1>Smoothies!</h1>
 
-<% @smoothies.each do |smoothie| %>
-  <p><%= smoothie.name %></p>
-<% end %>
+<div class="flex-container">
+  <div class="smoothie menu_box">
+    <h1>Pick a size:</h1>
+  <!-- <form>
+    <% @smoothies.each do |smoothie| %>
+      <input type="radio" name="smoothie" value="<%= smoothie.name %>"> <%= smoothie.name %> (<%= smoothie.size %>)<br>
+    <% end %>
+  </form> -->
+
+  </div>
+
+  <div class="menu_box">
+    <h1>Pick your liquid:</h1>
+  </div>
+
+  <div class="menu_box">
+    <h1>Pick your vitmins:</h1>
+  </div>
+
+  <div class="menu_box">
+    <h1>Spice it up!</h1>
+  </div>
+</div>
