@@ -15,9 +15,23 @@
  */
 
 body {
+  color: white;
   background-color: grey;
   background-image: url('http://res.cloudinary.com/ddpouudhk/image/upload/v1481751084/2rmwpwymz84-david-di-veroli_csexlc.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-   background-position: center; 
+   background-position: center;
+}
+
+.menu_box{
+  width: 20%;
+  margin: 30px;
+  padding: 20px;
+  border-style: dotted;
+  border-color: white;
+  display: inline-block;
+}
+
+.menu_box p {
+  font-size: 20px;
 }
