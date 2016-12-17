@@ -19,14 +19,15 @@ html{
 }
 
 body {
+  padding: 0;
+  margin: 0;
   font-family: 'Abel', sans-serif;
   color: white;
   background-color: grey;
   background-image: url('http://res.cloudinary.com/ddpouudhk/image/upload/v1481751084/2rmwpwymz84-david-di-veroli_csexlc.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-   background-position: center;
-
+  background-position: center;
 }
 
 /* HEADER */
@@ -89,4 +90,12 @@ body {
 
 .menu_box p {
   font-size: 20px;
+}
+
+.footer {
+  margin: 100px 0px 0px 0px;
+  padding: 0px;
+  width: auto;
+  height: 200px;
+  background-color: #343235;
 }
