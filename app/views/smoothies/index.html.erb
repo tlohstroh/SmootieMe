@@ -1,47 +1,53 @@
 
 <div class="flex-container">
-  <div class="smoothie menu_box">
-    <h1>Pick a size:</h1>
-    <div class="options">
-      <form>
-        <% @smoothies.each do |smoothie| %>
-          <input type="radio" name="smoothie" value="<%= smoothie.name %>"> <%= smoothie.name %> <span class="right">(<%= smoothie.size %>)</span><br>
-        <% end %>
-      </form>
+  <div class="flex-container box">
+    <div class="smoothie menu_box">
+      <h1>Pick a size:</h1>
+      <div class="options">
+        <form>
+          <% @smoothies.each do |smoothie| %>
+            <input type="radio" name="smoothie" value="<%= smoothie.name %>"> <%= smoothie.name %> <span class="right">(<%= smoothie.size %>)</span><br>
+          <% end %>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <div class="menu_box">
-    <h1>Pick your liquid:</h1>
-    <div class="options">
-      <form>
-        <% @liquids.each do |liquid| %>
-          <input type="radio" name="liquid" value="<%= liquid.name %>"><%=liquid.name %> <span class="right"><%= number_to_currency(liquid.price, unit: '€') %></span><br>
-        <% end %>
-      </form>
+    <div class="menu_box">
+      <h1>Pick a liquid:</h1>
+      <div class="options">
+        <form>
+          <% @liquids.each do |liquid| %>
+            <input type="radio" name="liquid" value="<%= liquid.name %>"><%=liquid.name %> <span class="right">+ <%= number_to_currency(liquid.price, unit: '€') %></span><br>
+          <% end %>
+        </form>
+      </div>
     </div>
-  </div>
+  </div> <!--end box 1-->
 
-  <div class="menu_box">
-    <h1>Pick your vitmins:</h1>
-    <div class="options">
-      <form>
-        <% @solids.each do |ingredient| %>
-          <input type="checkbox" name="ingredient" value="<%= ingredient.name %>"><%=ingredient.name %> <span class="right"><%= number_to_currency(ingredient.price, unit: '€') %></span><br>
-        <% end %>
-      </form>
+  <div class="flex-container box">
+    <div class="menu_box">
+      <h1>Pick your vitmins:</h1>
+      <div class="options">
+        <form>
+          <% @solids.each do |ingredient| %>
+            <input type="checkbox" name="ingredient" value="<%= ingredient.name %>"><%=ingredient.name %> <span class="right">+ <%= number_to_currency(ingredient.price, unit: '€') %></span><br>
+          <% end %>
+        </form>
+      </div>
     </div>
-  </div>
 
 
-  <div class="menu_box">
-    <h1>Spice it up!</h1>
-    <div class="options">
-      <form>
-        <% @spices.each do |spice| %>
-          <input type="checkbox" name="spice" value="<%= spice.name %>"><%=spice.name %> <span class="right"><%= number_to_currency(spice.price, unit: '€') %></span><br>
-        <% end %>
-      </form>
+    <div class="menu_box">
+      <h1>Spice it up!</h1>
+      <div class="options">
+        <form>
+          <% @spices.each do |spice| %>
+            <input type="checkbox" name="spice" value="<%= spice.name %>"><%=spice.name %> <span class="right">+ <%= number_to_currency(spice.price, unit: '€') %></span><br>
+          <% end %>
+        </form>
+      </div>
     </div>
-  </div>
+  </div><!--end box 2-->
+
+
 </div>
