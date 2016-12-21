@@ -34,7 +34,7 @@
         <div class="options">
           <form>
             <% @solids.each do |ingredient| %>
-            <% ingredient_price = number_to_currency(ingredient.price, unit: '€') %>
+              <% ingredient_price = number_to_currency(ingredient.price, unit: '€') %>
               <input type="checkbox" name="ingredient" id="<%= ingredient.name %>" value="<%= ingredient_price %>"><%=ingredient.name %> <span class="right">+ <%= number_to_currency(ingredient.price, unit: '€') %></span><br>
             <% end %>
           </form>
@@ -47,7 +47,8 @@
         <div class="options">
           <form>
             <% @spices.each do |spice| %>
-              <input type="checkbox" name="spice" value="<%= spice.name %>"><%=spice.name %> <span class="right">+ <%= number_to_currency(spice.price, unit: '€') %></span><br>
+              <% spice_price = number_to_currency(spice.price, unit: '€') %>
+              <input type="checkbox" name="spice" id="<%= spice.name %>" value="<%= spice_price %>"><%=spice.name %> <span class="right">+ <%= number_to_currency(spice.price, unit: '€') %></span><br>
             <% end %>
           </form>
         </div>
