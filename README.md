@@ -1,6 +1,8 @@
 # README
 
-![Full screen](https://cloudinary.com/console/media_library#/dialog/image/upload/SmoothieMe_ooagim)
+![Full screen](http://res.cloudinary.com/ddpouudhk/image/upload/v1482347928/SmoothieMe_ooagim.png)
+![Medium](http://res.cloudinary.com/ddpouudhk/image/upload/v1482347910/SmoothieMe_1_lfbbws.png)
+![Mobile](http://res.cloudinary.com/ddpouudhk/image/upload/v1482347884/SmoothieMe_2_uidlft.png)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
