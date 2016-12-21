@@ -20,34 +20,29 @@ $(document).ready(function(){
 
   // choices panel
   $('input[type="radio"]').click(function(){
-      if($(this).attr("name")=="smoothie"){
-          $(".chosen-smootie-size").html(this.id);
-          $(".chosen-smootie-price").html(this.value);
-          calculateSum()
-      }
+    if($(this).attr("name")=="smoothie"){
+        $(".chosen-smootie-size").html(this.id);
+        $(".chosen-smootie-price").html(this.value);
+    }
 
-      if($(this).attr("name")=="liquid"){
-          $(".chosen-liquid").html(this.id);
-          $(".chosen-liquid-price").html(this.value);
-          calculateSum()
-      }
+    if($(this).attr("name")=="liquid"){
+        $(".chosen-liquid").html(this.id);
+        $(".chosen-liquid-price").html(this.value);
+    }
+    calculateSum()
   });
 
   $('input[type="checkbox"]').click(function(){
-      // if($(this).attr("name")=="ingredient"){
-        // append ingredient & price to choices list
-        if($(this).prop('checked')){
-          $(".choices").append("<p>" + this.id + "<span class='price right'>" + this.value + "</span></p>" );
-          calculateSum();
-        }
-        else{
-          $(".choices p").filter(":contains(" + this.id + ")").remove()
-          calculateSum();
-        }
-
-
-      // }
+    // append ingredient & price to choices list
+    if($(this).prop('checked')){
+      $(".choices").append("<p>" + this.id + "<span class='price right'>" + this.value + "</span></p>" );
+    }
+    else{
+      $(".choices p").filter(":contains(" + this.id + ")").remove()
+    }
+    calculateSum();
   });
+
 
   // funcion to calculate the total price
   function calculateSum() {
@@ -57,20 +52,6 @@ $(document).ready(function(){
     });
     $(".total-price").html("€" + sum.toFixed(2));
   }
-
-
-
-
-
-
-
-
-
-//
-// var sum = 0
-//
-// $(".total-price").html(sum);
-
 
 
 });
