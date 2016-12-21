@@ -7,10 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Smoothie.delete_all
+Ingredient.delete_all
 
-Smoothie.create(name: "Little Luxury", size: "small")
-Smoothie.create(name: "Meet Me in The Middle", size: "medium")
-Smoothie.create(name: "Big is Beautiful", size: "large")
+Smoothie.create(name: "Little Luxury", size: "small", price: 2.00)
+Smoothie.create(name: "Meet Me in The Middle", size: "medium", price: 3.00)
+Smoothie.create(name: "Big is Beautiful", size: "large", price: 4.00)
 
 Ingredient.create(name: "Milk", description: "It's good for you", category:"liquids", price: 1.00 )
 Ingredient.create(name: "Yoghurt", description: "It's good for you", category:"liquids", price: 1.00 )

@@ -1,53 +1,72 @@
-
-<div class="flex-container">
-  <div class="flex-container box">
-    <div class="smoothie menu_box">
-      <h1>Pick a size:</h1>
-      <div class="options">
-        <form>
-          <% @smoothies.each do |smoothie| %>
-            <input type="radio" name="smoothie" value="<%= smoothie.name %>"> <%= smoothie.name %> <span class="right">(<%= smoothie.size %>)</span><br>
-          <% end %>
-        </form>
+<div class="flex-container wrapper">
+  <div class="flex-container">
+    <div class="flex-container box">
+      <div class="smoothie menu_box">
+        <h1>Pick a size:</h1>
+        <div class="options">
+          <form action="#">
+            <% @smoothies.each do |smoothie| %>
+              <% smoothie_price = number_to_currency(smoothie.price, unit: '€') %>
+              <input type="radio" name="smoothie" id="<%= smoothie.name %>" value="<%= smoothie_price %>"> <%= smoothie.name %> <span class="right"><%= smoothie_price %></span><br>
+            <% end %>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <div class="menu_box">
-      <h1>Pick a liquid:</h1>
-      <div class="options">
-        <form>
-          <% @liquids.each do |liquid| %>
-            <input type="radio" name="liquid" value="<%= liquid.name %>"><%=liquid.name %> <span class="right">+ <%= number_to_currency(liquid.price, unit: '€') %></span><br>
-          <% end %>
-        </form>
+      <div class="menu_box">
+        <h1>Pick a liquid:</h1>
+        <div class="options">
+          <form>
+            <% @liquids.each do |liquid| %>
+              <% liquid_price = number_to_currency(liquid.price, unit: '€') %>
+              <input type="radio" name="liquid" id="<%= liquid.name %>" value="<%= liquid_price %>"><%=liquid.name %> <span class="right">+ <%= liquid_price %></span><br>
+            <% end %>
+          </form>
+        </div>
       </div>
-    </div>
-  </div> <!--end box 1-->
+    </div> <!--end box 1-->
 
-  <div class="flex-container box">
-    <div class="menu_box">
-      <h1>Pick your vitmins:</h1>
-      <div class="options">
-        <form>
-          <% @solids.each do |ingredient| %>
-            <input type="checkbox" name="ingredient" value="<%= ingredient.name %>"><%=ingredient.name %> <span class="right">+ <%= number_to_currency(ingredient.price, unit: '€') %></span><br>
-          <% end %>
-        </form>
+
+
+    <div class="flex-container box">
+      <div class="menu_box">
+        <h1>Pick your vitmins:</h1>
+        <div class="options">
+          <form>
+            <% @solids.each do |ingredient| %>
+            <% ingredient_price = number_to_currency(ingredient.price, unit: '€') %>
+              <input type="checkbox" name="ingredient" id="<%= ingredient.name %>" value="<%= ingredient_price %>"><%=ingredient.name %> <span class="right">+ <%= number_to_currency(ingredient.price, unit: '€') %></span><br>
+            <% end %>
+          </form>
+        </div>
       </div>
-    </div>
 
 
-    <div class="menu_box">
-      <h1>Spice it up!</h1>
-      <div class="options">
-        <form>
-          <% @spices.each do |spice| %>
-            <input type="checkbox" name="spice" value="<%= spice.name %>"><%=spice.name %> <span class="right">+ <%= number_to_currency(spice.price, unit: '€') %></span><br>
-          <% end %>
-        </form>
+      <div class="menu_box">
+        <h1>Spice it up!</h1>
+        <div class="options">
+          <form>
+            <% @spices.each do |spice| %>
+              <input type="checkbox" name="spice" value="<%= spice.name %>"><%=spice.name %> <span class="right">+ <%= number_to_currency(spice.price, unit: '€') %></span><br>
+            <% end %>
+          </form>
+        </div>
       </div>
+    </div><!--end box 2-->
+
+  </div><!--end flex-container-->
+
+<div class="menu_box price-box">
+  <h1>Your choice:</h1>
+  <div class="options">
+    <div class="choices"
+      <p><span class="chosen-smootie-size options"></span>
+        <span class="price chosen-smootie-price right"></span></p>
+      <p><span class="chosen-liquid options"></span>
+        <span class="price chosen-liquid-price right"></span></p>
     </div>
-  </div><!--end box 2-->
-
-
+    <hr>
+    <p>TOTAL: <span class="total-price right">...</span></p>
+</div>
+</div>
 </div>
